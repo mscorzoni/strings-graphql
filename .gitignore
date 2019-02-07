@@ -12,8 +12,10 @@
 
 
 # production
-/frontend/build
 /backend/build
+/frontend/build
+*next*
+
 
 # misc
 .DS_Store
@@ -25,3 +27,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+frontend/.next/server/static/development/pages/_app.js.map
+frontend/.next/server/static/development/pages/_app.js
+frontend/.next/static/development/pages/_app.js
+frontend/.next/static/development/pages/_app.js.map
+frontend/.next/static/runtime/webpack.js
