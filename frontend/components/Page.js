@@ -48,6 +48,7 @@ injectGlobal`
   a {
     text-decoration: none;
     color: ${theme.black};
+    cursor: pointer;
   }
   button {  font-family: 'Oswald'; }
 `;
