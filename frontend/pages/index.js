@@ -1,9 +1,10 @@
 import React from 'react';
+import Items from '../components/Items';
 
 const Home = props  => {
   return (
     <div>
-      Hey
+      <Items />
     </div>
   );
 };

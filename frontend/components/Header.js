@@ -99,7 +99,7 @@ const Header = props => {
                 <div className="bottom">
                   <div className="user">
                     <Link href="/items">
-                      <a>Items</a>
+                      <a>Shop</a>
                     </Link>
                     <Link href="/sell">
                       <a>Sell</a>

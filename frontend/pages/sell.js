@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sell = () => {
+const Sell = props => {
   return (
     <div>
       Sell
