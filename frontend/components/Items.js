@@ -6,7 +6,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
 import faCheck from '@fortawesome/fontawesome-free-solid/faCheck';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
-import Card from './Card';
+import Item from './Item';
 
 const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
@@ -23,18 +23,31 @@ const ALL_ITEMS_QUERY = gql`
   }
 `;
 
+const Center = styled.div`
+  text-align: center;
+`;
+
+const ItemsList = styled.div`
+  
+`;
 class Items extends Component {
   render() {
     return (
-      <div>
+      <Center>
         <Query query={ALL_ITEMS_QUERY}>
           {({ data, error, loading }) => {
             if(loading) return <p>Loading...</p>
             if(error) return <p>Error: { error.message }</p>
-            return <Card />
+            return (
+              <ItemsList>
+                {data.items.map(item => (
+                  <Item item={item} key={item.id}/>
+                ))}
+              </ItemsList>
+            )
           }}
         </Query>
-      </div>
+      </Center>
     );
   }
 } 

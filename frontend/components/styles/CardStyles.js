@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const CardStyle = styled.div`
+const CardStyles = styled.div`
   .card_item_wrapper {
     flex-grow: 1;
     width: 25%;
@@ -108,46 +107,4 @@ const CardStyle = styled.div`
 }
 `;
 
-function  renderCardImage(images){
-  if(images && images.length > 0){
-      return images[0].url
-  } else {
-      return '/static/images/image_not_availble.png'
-  }}
-
-const Card = props => {
-  return (
-    <CardStyle>
-      <div className={`card_item_wrapper `}>
-        <div
-            className="image"
-            style={{
-                background:`url(${renderCardImage(props.images)}) no-repeat`
-            }}>  </div>
-        <div className="action_container">
-            <div className="tags">
-                {/* <div className="brand">{props.brand.name}</div> */}
-                <div className="name">{props.name}</div>
-                <div className="name">${props.price}</div>
-            </div>
-            <div className="description">
-                <p>
-                    {props.description}
-                </p>    
-            </div>
-            <div className="actions">
-              <div className="button_wrapp">
-                 <button>Button</button>
-              </div>
-              <div className="button_wrapp">
-                <button>Button</button>
-              </div>
-            </div>
-        </div>
-      </div>
-    </CardStyle>
-    
-  );
-};
-
-export default Card;
+export default CardStyles;
