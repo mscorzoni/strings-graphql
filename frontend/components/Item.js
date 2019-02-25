@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CardStyle from './styles/CardStyles';
 import Link from 'next/link';
 import formatMoney  from '../lib/formatMoney'
+import Delete from './DeleteItem';
 
 
 class Item extends Component {
@@ -64,7 +65,7 @@ class Item extends Component {
                 <button>Add To Cart</button>
               </div>
               <div className="button_wrapp">
-                <button>Delete</button>
+                <Delete id={item.id }>Delete</Delete>
               </div>
             </div>
         </div>
